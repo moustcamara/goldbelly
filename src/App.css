@@ -1,33 +1,241 @@
-.App {
-  text-align: center;
+/** General Styles **/
+
+html {
+  font-size: 16px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  color: #333333;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+h1,.h1 {font-size: 3rem}
+h2,.h2 {font-size: 2.5rem}
+h3,.h3 {font-size: 2rem}
+h4,.h4 {font-size: 1.5rem}
+h5,.h5 {font-size: 1rem}
+h6,.h6 {font-size: .75rem}
+
+div, span, input, textarea, button  {
+  box-sizing: border-box;
+  font-family: Cabin, Helvetica, Arial, sans-serif
+}
+
+img {
+  width: 100%;
+}
+
+
+body {
+  background-color: #f3eae1;
+  font-family: Cabin, Helvetica, Arial, sans-serif;
+  color: #5e5e5e;
+}
+
+header {
+  background-color: #F9F8F4;
+}
+
+.container {
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+
+/** Header **/
+
+.site-header {
+    padding: 25px 0;
+    margin-bottom: 20px;
+}
+
+.site-header .container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.site-header__logo {
+    width: 150px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.site-header__logo svg {
+    fill: #ff4d4f;
+}
+
+.site-header__minicart {
+    display: flex;
+    align-items: center;
+}
+
+.site-header__minicart-icon {
+    margin-right: 5px;
+}
+
+/** Grid System **/
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+
+.row [class^='col-'] {
+  display:inline-block;
+  vertical-align: top;
+  padding: 0 20px;
+}
+
+
+.col-half {
+  width: 50%;
+}
+
+@media screen and (max-width: 767px) {
+
+  .col-sm-full {
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+}
+
+/** Form Elements **/
+
+.form__element {
+    padding: 0 15px;
+}
+
+.form__element input[type=text],
+.form__element input[type=email]
+ {
+    width: 100%;
+    padding: 1.2em 0.8em;
+    border: 1px solid #e1e0de;
+    border-radius: 3px;
+    background-color: white;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+
+.form__element textarea {
+    width: 100%;
+    padding: 1.2em 0.8em;
+    border: 1px solid #e1e0de;
+    border-radius: 3px;
+    background-color: white;
+    color: #333;
+    height: 200px;
+}
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    border: 1px solid transparent;
+    border-radius: 0.1875rem;
+    font-size: 1rem;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.btn-full {
+  width: 100%;
+}
+
+.btn-main {
+  background-color: #ff4d4f;
+  color: #fff;
+}
+
+.btn-main:hover {
+  background-color: #ff0103;
+}
+
+
+/** Product Info **/
+
+.product {
+    padding: 30px 0px 100px;
+}
+
+.product__intro {
+    margin-bottom: 30px;
+}
+
+.product__title {
+    margin-bottom: 5px;
+}
+
+/** Product Options **/
+
+.product__options-set {
+    display: flex;
+}
+
+.product__options-heading {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.product__option-label {
+  margin-right: 10px;
+  cursor: pointer
+}
+
+.product__option-label input {
+    visibility: hidden;
+    position: absolute;
+}
+
+.product__option-label span {
+    font-size: 25px;
+    font-weight: 600;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid transparent;
+}
+
+
+.product__option-label:hover span {
+    border-color: #ff4d4f;
+}
+
+.product__option-label input:checked + span {
+    box-shadow: inset 0px 0px 0px 3px #ff4d4f;
+    border-color: #ff4d4f;
+}
+
+.product__option-custom input[type=number] {
+    padding: 15px;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    border-radius: 5px;
+    border: none;
+    box-shadow: none;
+    height: 50px;
+    font-size: 24px;
+}
+
+.product__option-group, .product__option-custom {
+    margin-bottom: 20px;
+}
+
+.product__option-currency-sign {
+  margin-right: 5px;
+  font-size: 24px;
+}
+
+.product__option-note {
+    margin-top: 5px;
 }

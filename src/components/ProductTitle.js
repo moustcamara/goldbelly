@@ -2,7 +2,7 @@ import React from 'react';
 
 const ProductTitle = props => (
 
-	<h3>E-Gift Card</h3>
+	<div className="product__title"><h1 class="h4">{props.title}</h1></div>
 
 )
 

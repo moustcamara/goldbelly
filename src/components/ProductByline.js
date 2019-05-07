@@ -2,7 +2,7 @@ import React from 'react';
 
 const ProductByline = props => (
 
-	<div>By Gift Cards + Boxes</div>
+	<div className="product__byline">By {props.category}</div>
 
 )
 
