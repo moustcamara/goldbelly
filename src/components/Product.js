@@ -15,7 +15,7 @@ const Product = props => (
 		<div className="product row">
 
 			<div className="col-half col-sm-full">			
-				<ProductImage />
+				<ProductImage info={props.info} />
 				<ProductDescription />
 			</div>
 

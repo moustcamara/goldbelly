@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import handleChange from '../App';
 
 class SingleInputField extends Component {
 	constructor(props){
@@ -8,8 +7,8 @@ class SingleInputField extends Component {
 
   render() {
   	return (
-	    <div className="form__element">
-	        <input type="text" name={this.props.name} value={this.props.value} placeholder={this.props.title} onChange={this.props.actions.change} />
+	    <div className={this.props.width + " form__element"}>
+	        <input type={this.props.type} name={this.props.name} value={this.props.value} placeholder={this.props.title} onChange={this.props.actions.change} required={this.props.required} />
 	    </div>
 	  );
   }

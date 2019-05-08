@@ -11,8 +11,10 @@ const ProductForm = props => (
 
 			<ProductOptions actions={props.actions} fields={props.fields}/>
 			<ProductFieldsGroup actions={props.actions} fields={props.fields}/>
-			<div>
-				<SubmitButton text="Add to Cart" />
+			<div className="row">
+				<div className="col-full">
+						<SubmitButton text="Add to Cart" />
+				</div>
 			</div>
 
 		</form>
