@@ -332,6 +332,11 @@ header {
     margin-top: 30px;
 }
 
+.cart__items {
+    max-height: 67vh;
+    overflow: auto;
+}
+
 .cart__single-item {
     margin-bottom: 1rem;
     padding-bottom: 1.5rem;
